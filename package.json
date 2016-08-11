@@ -1,0 +1,32 @@
+{
+  "name": "try-hard",
+  "version": "1.0.0",
+  "description": "Simple tool to use in your tests when you don't control the timing",
+  "main": "index.js",
+  "scripts": {
+    "compile": "rimraf lib/* && babel src -d lib",
+    "prepublish": "npm run compile",
+    "test": "mocha --compilers js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Polyconseil/try-hard.git"
+  },
+  "keywords": [
+    "test",
+    "wait"
+  ],
+  "author": "Henri Jouhaud <riton@melix.net> (https://github.com/HenriJ)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-plugin-syntax-flow": "^6.13.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-3": "^6.11.0",
+    "babel-register": "^6.11.6",
+    "mocha": "^3.0.2"
+  }
+}
